@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Invader/Invader.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 28.0
+height = 25.0
+
+[node name="Invader" type="Sprite" index="0"]
+
+z_index = 500
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+colourType = null
+
+[node name="InvaderArea" type="Area2D" parent="." index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvaderArea" index="0"]
+
+rotation = 1.5708
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TitleValue/TitleValue.tscn" type="PackedScene" id=1]
+
+[node name="GUI" type="Node2D"]
+
+z_index = 1000
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Score" parent="." index="0" instance=ExtResource( 1 )]
+
+paddingLength = 8
+
+[node name="Wave" parent="." index="1" instance=ExtResource( 1 )]
+
+margin_left = 900.0
+margin_right = 1025.0
+text = "Wave:"
+
+[node name="Lives" parent="." index="2" instance=ExtResource( 1 )]
+
+margin_left = 1700.0
+margin_right = 1824.0
+text = "Lives:"
+paddingLength = 1
+
+
